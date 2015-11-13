@@ -1,0 +1,44 @@
+<template name="adminLogin">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h4>Login</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                {{#unless user}}
+                    <form>
+                        {{#unless users}}
+                            <h6>You need to create the admin first</h6>
+                            <div class="input-field">
+                                <label for="userName">Username</label>
+                                <input type="text" name="userName" id="userName" class="validate">
+                            </div>
+                        {{/unless}}
+                        <div class="input-field">
+                            <label for="userEmail">Email</label>
+                            <input type="email" name="userEmail" class="validate">
+                        </div>
+                        <div class="input-field">
+                            <label for="userPassword">Password</label>
+                            <input type="password" name="userPassword" class="validate">
+                        </div>
+                        <button type="submit" class="waves-effect btn">
+                            {{#if users}}
+                                Sign in
+                            {{else}}
+                                Register the admin
+                            {{/if}}
+                        </button>
+                    </form>
+                {{/unless}}
+                {{#if user}}
+                    <h5>You are logged in</h5>
+                    <a class="waves-effect waves-light btn" href="/admin">Go to the admin page</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+</template>

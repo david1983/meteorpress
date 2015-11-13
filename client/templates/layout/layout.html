@@ -1,0 +1,14 @@
+<template name="defaultlayout">
+    {{>navbar}}
+
+    <main>
+        <div class="row">
+            <div class="col s12"> <!-- Note that "m8 l9" was added -->
+                {{> yield }}
+            </div>
+        </div>
+    </main>
+    {{>footer}}
+
+
+</template>

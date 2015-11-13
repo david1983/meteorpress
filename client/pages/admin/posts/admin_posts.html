@@ -1,0 +1,32 @@
+<template name="adminPostsList">
+    <div class="container">
+        <div class="row">
+            <h4>Post list</h4>
+        </div>
+        <div class="row">
+            <div class="collection">
+                {{#each posts}}
+                    {{>adminPost}}
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+
+</template>
+
+
+<template name="adminPost">
+    <li class="collection-item avatar">
+        <img src="{{image}}" alt="" class="circle">
+        <span class="title">{{title}}</span>
+        <p>{{_id}}</p>
+
+        <div class="secondary-content">
+            <a href="/admin/post/{{_id}}" id="editBtn"><i class="material-icons">edit</i></a>
+            <a href="" id="deleteBtn"><i class="material-icons">delete</i></a>
+        </div>
+
+
+    </li>
+</template>

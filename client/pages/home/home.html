@@ -1,0 +1,36 @@
+<template name="home">
+    {{>infinite}}
+</template>
+
+<template name="infinite">
+    {{#each posts}}
+        {{>mypost}}
+    {{/each}}
+    {{#if moreResults}}
+        <div id="showMoreResults" style="margin-left: 25px;">
+            <span class="loading">Loading...</span>
+        </div>
+    {{/if}}
+</template>
+
+<template name="mypost">
+    <div class="parallax-container">
+        <div class="parallax">
+            {{#if image}}
+                <img src="{{image}}">
+            {{else}}
+                <img src="/upload/blue-drops-11.jpeg">
+            {{/if}}
+        </div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">{{title}}</h2>
+            <p class="grey-text text-darken-3 lighten-3">
+                {{{content}}}
+            </p>
+            <p></p>
+        </div>
+    </div>
+
+</template>
