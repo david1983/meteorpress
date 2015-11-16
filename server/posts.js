@@ -7,11 +7,11 @@ Posts.allow({
 
 Meteor.methods({
     addPost: function(post){
-        console.log(post)
+        post.created_at = new Date();
         Posts.insert(post)
     },
     editPost: function(post){
-        console.log(post);
+        post.updated_at = new Date();
         Posts.update({title : post.title},post,{validate: false});
     },
     removePost: function(post_id){
