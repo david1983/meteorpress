@@ -4,10 +4,16 @@
             <h4>Post list</h4>
         </div>
         <div class="row">
+            <div class="col s8"></div><div class="col s4"> <a class="btn btn-primary" href="/admin/post">Add new post</a></div>
+        </div>
+        <div class="row">
+
             <div class="collection">
+                {{#momentum plugin='right-to-left'}}
                 {{#each posts}}
                     {{>adminPost}}
                 {{/each}}
+                {{/momentum}}
             </div>
 
         </div>

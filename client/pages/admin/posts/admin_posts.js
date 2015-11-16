@@ -1,6 +1,6 @@
 Template.adminPostsList.helpers({
     posts: function(){
-        return Posts.find({})
+        return Posts.find({}).fetch().reverse()
     }
 })
 

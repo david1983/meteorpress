@@ -26,5 +26,21 @@ Posts.attachSchema(new SimpleSchema({
         //    type: "hidden",
         //    label: false
         //},
+    },
+    created_at:{
+        type: Date,
+        optional: true,
+        autoform:{
+            type: "hidden",
+            label:false
+        }
+    },
+    updated_at:{
+        type: Date,
+        optional: true,
+        autoform:{
+            type: "hidden",
+            label:false
+        }
     }
 }));

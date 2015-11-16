@@ -3,9 +3,11 @@
 </template>
 
 <template name="infinite">
+{{#momentum plugin='right-to-left'}}
     {{#each posts}}
         {{>mypost}}
     {{/each}}
+    {{/momentum}}
     {{#if moreResults}}
         <div id="showMoreResults" style="margin-left: 25px;">
             <span class="loading">Loading...</span>
@@ -29,7 +31,7 @@
             <p class="grey-text text-darken-3 lighten-3">
                 {{{content}}}
             </p>
-            <p></p>
+            <p>{{created_at}}</p>
         </div>
     </div>
 

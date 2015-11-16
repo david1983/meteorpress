@@ -2,7 +2,7 @@
 if (Meteor.isServer) {
 
     Meteor.publish('posts', function(limit) {
-        return Posts.find({}, { limit: limit });
+        return Posts.find({}, {limit: limit })
     })
 
 } else if (Meteor.isClient) {
@@ -14,7 +14,7 @@ if (Meteor.isServer) {
 
 
     Template.infinite.posts = function() {
-        return Posts.find({}, { limit: Session.get('itemsLimit') });
+        return Posts.find({}, {limit: Session.get('itemsLimit') }).fetch().reverse();
     }
     Template.infinite.moreResults = function() {
         // If, once the subscription is ready, we have less rows than we
