@@ -34,10 +34,14 @@
             </p>
 
         </div>
-        <div style="padding:0.4em">
-            {{>shareit share_data}}
-        </div>
-
+        <div style="padding:0.4em;text-align: center;">
+            <div style="display:inline-block;">
+                <a class="waves-effect waves-light btn" style="background:#3B5998" href="https://www.facebook.com/dialog/share?app_id=1580484175528065&display=popup&href={{base_url}}/post/{{_id}}&redirect_uri={{base_url}}/post/{{_id}}"><i class="fa fa-facebook"></i></a>
+                <a class="waves-effect waves-light btn" style="background:#4099FF" href="https://twitter.com/intent/tweet?url={{base_url}}/post/{{_id}}&amp;text={{title}}"><i class="fa fa-twitter"></i></a>
+                <a class="waves-effect waves-light btn" style="background:#D34836" href="https://plus.google.com/share?url={{base_url}}/post/{{_id}}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></a>
+                <a class="waves-effect waves-light btn" style="background:#D34836" href="http://www.pinterest.com/pin/create/button/?url={{base_url}}/post/{{_id}}&amp;media={{image}}&amp;description={{title}}"><i class="fa fa-pinterest"></i></a>
+            </div>
+       </div>
     </div>
 
 </template>
