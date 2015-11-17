@@ -16,6 +16,7 @@ if (Meteor.isServer) {
     Template.infinite.posts = function() {
         return Posts.find({}, {limit: Session.get('itemsLimit') }).fetch().reverse();
     }
+
     Template.infinite.moreResults = function() {
         // If, once the subscription is ready, we have less rows than we
         // asked for, we've got all the rows in the collection.

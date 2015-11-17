@@ -2,6 +2,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  max-width: 100vw;
 }
 
 main {
@@ -31,4 +32,8 @@ nav a:hover, nav a:focus {
   position:fixed;
   max-height:90%;
   top:100px
+}
+
+.content{
+  word-break: break-all;
 }

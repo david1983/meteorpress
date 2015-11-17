@@ -3,11 +3,11 @@
 </template>
 
 <template name="infinite">
-{{#momentum plugin='right-to-left'}}
+
     {{#each posts}}
         {{>mypost}}
     {{/each}}
-    {{/momentum}}
+
     {{#if moreResults}}
         <div id="showMoreResults" style="margin-left: 25px;">
             <span class="loading">Loading...</span>
@@ -27,14 +27,17 @@
     </div>
     <div class="section white">
         <div class="row container">
-            <h2 class="header">{{title}}</h2>
-            <p class="grey-text text-darken-3 lighten-3">
+            <h2 class="header"><a href="/post/{{_id}}">{{title}}</a></h2>
+            <p class="grey-text text-darken-3 lighten-3 content">
                 {{{content}}}
-                <br>
-                {{>shareit}}
+                <br><hr>
             </p>
 
         </div>
+        <div style="padding:0.4em">
+            {{>shareit share_data}}
+        </div>
+
     </div>
 
 </template>

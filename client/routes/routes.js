@@ -7,6 +7,13 @@ Router.route('/about',{
     action: function(){this.render('about');}
 });
 
+Router.route('/post/:_id',{
+    data:function(){
+        return Posts.findOne({_id: this.params._id});
+    },
+    action: function(){this.render('post');}
+});
+
 
 Router.route('/admin/login', {
     action: function(){
